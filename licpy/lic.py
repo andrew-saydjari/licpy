@@ -304,9 +304,9 @@ def runlic(vx, vy, L, magnitude=True):
     np.random.seed(13)
     tex = np.random.rand(N, M)
 
-    tex_ = tf.placeholder(tf.float64, [N, M])
-    vx_ = tf.placeholder(tf.float64, [N, M])
-    vy_ = tf.placeholder(tf.float64, [N, M])
+    tex_ = tf.compat.v1.placeholder(tf.float64, [N, M])
+    vx_ = tf.compat.v1.placeholder(tf.float64, [N, M])
+    vy_ = tf.compat.v1.placeholder(tf.float64, [N, M])
 
     tex_out_ = line_integral_convolution(tex_, vx_, vy_, L, N, M, smax=0.8 * L)
     if magnitude:

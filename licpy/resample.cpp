@@ -1,5 +1,6 @@
 // Copyright (C) 2010-2018 Dzhelil S. Rufat. All Rights Reserved.
-
+#define PYSSIZE_T_CLEAN
+#include <Python.h>
 void resample(const double* xx, int Nx,  //
               int* idx, double* yy, int Ny) {
   auto dy = (xx[Nx - 1] - xx[0]) / Ny;
